@@ -11,31 +11,32 @@ import BenefitsChart from "@/components/BenefitsChart";
 import ContactForm from "@/components/ContactForm";
 import AboutUs from "@/components/AboutUs";
 import Footer from "@/components/Footer";
+import favicon from "./../../favicon.ico";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen roboto-flex-light">
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-primary-light text-white section-padding min-h-[80vh] flex items-center">
         <div className="container mx-auto">
           {/* Logo and Company Name */}
           <div className="flex items-center mb-8">
-            <img 
-            src="/favicon.ico" 
+            {/*}<img 
+            src={favicon} 
             alt="Green Earth Solutions Logo" 
             className="w-12 h-12 mr-3"
-          />
+          />*/}
           <h2 className="text-2xl font-medium">Green Earth Solutions</h2>
-        </div>
+        </div> 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-left max-w-2xl"
           >
-            <h1 className="text-4xl sm:text-6xl font-medium mb-6">
+            <h1 className="text-4xl sm:text-6xl font-medium mb-6 light-300">
               Unlock the Benefits of Solar for Your Business
             </h1>
             <p className="text-xl mb-8">
