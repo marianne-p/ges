@@ -56,7 +56,7 @@ Manage and pay for all day-to-day monitoring, maintenance and repairs yourself
           <div className="text-center mt-8">
             <Button
               variant="outline"
-              onClick={() => navigate("/comparison")}
+              onClick={() => navigate("/green_website/comparison")}
               className="hover:bg-primary hover:text-white"
             >
               See Full Comparison
