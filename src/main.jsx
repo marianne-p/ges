@@ -5,3 +5,7 @@ import "./index.css";
 ReactDOM.createRoot(document.getElementById("root")).render(
     <App />
 );
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.classList.add('loaded');
+});
