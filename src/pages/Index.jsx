@@ -20,6 +20,15 @@ const Index = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary to-primary-light text-white section-padding min-h-[80vh] flex items-center">
         <div className="container mx-auto">
+          {/* Logo and Company Name */}
+          <div className="flex items-center mb-8">
+            <img 
+            src="/favicon.ico" 
+            alt="Green Earth Solutions Logo" 
+            className="w-12 h-12 mr-3"
+          />
+          <h2 className="text-2xl font-medium">Green Earth Solutions</h2>
+        </div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
