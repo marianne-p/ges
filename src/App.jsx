@@ -20,24 +20,32 @@ const queryClient = new QueryClient({
 const LoadingSpinner = () => <div>Loading...</div>;
 
 const App = () => (
-  <ErrorBoundary>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <BrowserRouter>
-          <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
-              {navItems.map(({ to, page }) => (
-                <Route key={to} path={to} element={page} />
-              ))}
-              {/* Catch all route for 404 */}
-              <Route path="*" element={<Navigate to="/" replace />} />
-            </Routes>
-          </Suspense>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </ErrorBoundary>
+  <>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@300;400;500;600&display=swap"
+      as="style"
+      crossOrigin="anonymous"
+    />
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <BrowserRouter>
+            <Suspense fallback={<LoadingSpinner />}>
+              <Routes>
+                {navItems.map(({ to, page }) => (
+                  <Route key={to} path={to} element={page} />
+                ))}
+                {/* Catch all route for 404 */}
+                <Route path="*" element={<Navigate to="/" replace />} />
+              </Routes>
+            </Suspense>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
+  </>
 );
 
 export default App;

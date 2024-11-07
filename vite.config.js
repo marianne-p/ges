@@ -3,8 +3,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  optimizeDeps: {
+    include: ['@fontsource/roboto-flex']
+  },
   base: "/green_website/",
   server: {
     host: "::",
@@ -23,4 +25,30 @@ export default defineConfig({
       },
     ],
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        pure_funcs: ['console.log'] 
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'query-vendor': ['@tanstack/react-query'],
+          'ui-components': [
+            '@/components/ui/sonner',
+            '@/components/ui/tooltip'
+          ],
+          'styles': ['@/index.css']
+        }
+      }
+    },
+    sourcemap: true,
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096
+  }
 });
