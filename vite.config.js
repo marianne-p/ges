@@ -33,6 +33,9 @@ export default defineConfig({
         drop_console: true,
         pure_funcs: ['console.log'] 
       },
+      format: {
+        comments: false
+      }
     },
     rollupOptions: {
       output: {
@@ -42,13 +45,12 @@ export default defineConfig({
           'ui-components': [
             '@/components/ui/sonner',
             '@/components/ui/tooltip'
-          ],
-          'styles': ['@/index.css']
+          ]
+          //'styles': ['@/index.css']
         }
       }
     },
     sourcemap: true,
     cssCodeSplit: true,
-    assetsInlineLimit: 4096
   }
 });
