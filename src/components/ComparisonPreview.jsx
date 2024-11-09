@@ -9,7 +9,7 @@ const ComparisonPreview = () => {
   return (
     <section className="section-padding bg-gray-50">
       <div className="container mx-auto">
-        <h2 className="section-title">Compare Our Solutions</h2>
+        <h2 className="section-title">Comparison to other options</h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

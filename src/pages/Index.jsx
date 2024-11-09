@@ -45,7 +45,7 @@ const Index = () => {
             <Button
               size="lg"
               className="bg-white text-primary hover:bg-gray-100"
-              onClick={() => document.getElementById("contact").scrollIntoView({ behavior: "smooth" })}
+              onClick={() => document.getElementById("solar-solution").scrollIntoView({ behavior: "smooth" })}
             >
               Get Started
               <ArrowRightIcon className="ml-2 h-4 w-4" />

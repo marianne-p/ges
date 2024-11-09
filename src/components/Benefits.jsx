@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
-import { LightbulbIcon, HandshakeIcon, UserPlusIcon } from "lucide-react";
+import { LightbulbIcon, HandshakeIcon, UserPlusIcon, LeafyGreenIcon, LeafIcon, HandHelpingIcon, HandHeartIcon, HeartHandshakeIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const benefits = [
   {
-    icon: <HandshakeIcon className="h-8 w-8" />,
+    icon: <LeafIcon className="h-8 w-8" />,
     title: "Green and clean",
     description: "We help you harness clean energy for a sustainable future - in both financial and environmental terms",
   },
   {
-    icon: <UserPlusIcon className="h-8 w-8" />,
+    icon: <HandshakeIcon className="h-8 w-8" />,
     title: "Invested in your success",
     description: "We only benefit when you benefit – that’s why we offer our positive value guarantee",
   },

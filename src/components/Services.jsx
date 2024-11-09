@@ -37,13 +37,15 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="solar-solution" className="section-padding bg-gray-50">
       <div className="container mx-auto">
         <h2 className="section-title">Solar service solution</h2>
         <div className="flex flex-col items-center gap-4 mb-8">
           <div className="flex gap-4 max-w-3xl">
             <div className="w-1 bg-[#95e8b2] rounded shrink-0"></div>
-            <p className="section-subtitle text-gray-600 text-center space-x-1">End-to-end solution for complete peace of mind. We design, install, monitor, maintain, repair and insure the installation. You use the energy generated and are paid for any surplus exported, with no initial capital outlay, in exchange for a monthly service fee. We guarantee positive value for you, i.e., that the financial benefits of the installation are higher than the service fee.</p>
+            <p className="section-subtitle text-xl text-[#202729] text-center space-x-1">
+              End-to-end solution for complete peace of mind. We design, install, monitor, maintain, repair and insure the installation. You use the energy generated and are paid for any surplus exported, with no initial capital outlay, in exchange for a monthly service fee. We guarantee positive value for you, i.e., that the financial benefits of the installation are higher than the service fee.
+            </p>
             <div className="w-1 bg-[#95e8b2] rounded shrink-0"></div>
           </div>
         </div>
