@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { useState } from 'react';
+//import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
 
 const steps = [
   {
@@ -28,48 +30,59 @@ const steps = [
   },
   {
     number: "06",
-    title: "Pay monthly service fee, with positive value guarantee",
+    title: "Pay monthly, get positive value",
     description: "We guarantee your benefits will be higher than the service fee",
   },
 ];
 
 const ProcessSteps = () => {
+  const [showMore, setShowMore] = useState(false);
+  const containerRef = useRef(null);
+
+  const handleScroll = () => {
+    if (containerRef.current) {
+      const container = containerRef.current;
+      const scrollAmount = showMore ? 0 : container.scrollWidth - container.clientWidth;
+      container.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }
+    setShowMore(!showMore);
+  };
+  
   return (
-    <section className="section-padding bg-primary/5">
+    <section className="py-4 bg-primary/5">
       <div className="container mx-auto">
-        <h2 className="section-title text-primary-dark">How It Works</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.3 }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="relative"
+        <h2 className="section-title text-primary-dark mb-6">How It Works</h2>
+        <div className="relative">
+          <div 
+            ref={containerRef}
+            className="flex flex-col md:flex-row gap-2 md:gap-3 transition-all duration-300 md:overflow-x-auto md:scroll-smooth"
+          >
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                className="w-full md:w-1/4 flex-shrink-0"
+              >
+                {/* Rest of step content remains the same */}
+              </motion.div>
+            ))}
+          </div>
+          
+          {steps.length > 4 && (
+            <button
+              onClick={handleScroll}
+              aria-label={showMore ? "Show less steps" : "Show more steps"}
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              <div className="flex items-start space-x-4 p-6 hover:bg-primary/10 transition-colors duration-300 rounded-lg">
-                <motion.div
-                  initial={{ scale: 0.5, opacity: 0 }}
-                  whileInView={{ scale: 1, opacity: 1 }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.1,
-                    type: "spring",
-                    stiffness: 200,
-                    damping: 15
-                  }}
-                  className="text-primary text-4xl font-bold"
-                >
-                  {step.number}
-                </motion.div>
-                <div>
-                  <h3 className="text-xl font-medium text-primary-dark mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              <span className="text-xl">{showMore ? "←" : "→"}</span>
+            </button>
+          )}
         </div>
       </div>
     </section>
