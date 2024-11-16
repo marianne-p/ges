@@ -7,7 +7,7 @@ const ComparisonPreview = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="section-padding bg-gray-50">
+    <section id="comparison-preview" className="section-padding bg-gray-50">
       <div className="container mx-auto">
         <h2 className="section-title">Comparison to other options</h2>
         <motion.div

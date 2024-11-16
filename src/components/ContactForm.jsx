@@ -1,11 +1,39 @@
-import { useState } from "react";
+/*import { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import emailjs from 'emailjs-com';
+import emailjs from 'emailjs-com';*/
+import { Sun } from "lucide-react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
+const ContactForm = () => {
+  return (
+    <Link to="https://docs.google.com/forms/d/e/1FAIpQLSe0UnpRFummeS0BjVwyTruARq4Qx9jyqEowT6hr2iDAjXtihQ/viewform">
+      <motion.section
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        className="section-padding bg-primary-dark cursor-pointer"
+      >
+        <div className="container mx-auto max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl font-medium text-white mb-8 text-center">
+            Get a Quote
+          </h2>
+          <div className="flex items-center justify-center w-full text-white text-lg">
+            <Sun className="h-10 w-10 mr-2" />
+            Click Here to Fill Out the Form and we will get in touch with you
+          </div>
+        </div>
+      </motion.section>
+    </Link>
+  );
+};
+
+export default ContactForm;
+
+/*
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -147,5 +175,5 @@ const ContactForm = () => {
     </section>
   );
 };
-
-export default ContactForm;
+*/
+//export default ContactForm;
