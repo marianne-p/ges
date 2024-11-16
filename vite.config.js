@@ -7,10 +7,11 @@ export default defineConfig({
   optimizeDeps: {
     include: ['@fontsource/roboto-flex']
   },
-  base: "/green_website/",
+  assetsInclude: ['**/*.ttf', '**/*.jpg'],
+  base: "/",
   server: {
-    host: "::",
-    port: "3612",
+    host: "0.0.0.0",
+    port: 3612,
   },
   plugins: [react()],
   resolve: {
@@ -26,6 +27,7 @@ export default defineConfig({
     ],
   },
   build: {
+    outDir: "dist",
     chunkSizeWarningLimit: 1000,
     minify: 'terser',
     terserOptions: {
@@ -45,8 +47,8 @@ export default defineConfig({
           'ui-components': [
             '@/components/ui/sonner',
             '@/components/ui/tooltip'
-          ]
-          //'styles': ['@/index.css']
+          ],
+          'styles': ['@/index.css']
         }
       }
     },

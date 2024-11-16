@@ -1,7 +1,6 @@
+// src/components/ProcessSteps.jsx
+import { useState, useRef } from 'react';
 import { motion } from "framer-motion";
-import { useState } from 'react';
-//import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid';
-
 const steps = [
   {
     number: "01",
@@ -35,6 +34,8 @@ const steps = [
   },
 ];
 
+
+
 const ProcessSteps = () => {
   const [showMore, setShowMore] = useState(false);
   const containerRef = useRef(null);
@@ -50,15 +51,15 @@ const ProcessSteps = () => {
     }
     setShowMore(!showMore);
   };
-  
+
   return (
     <section className="py-4 bg-primary/5">
       <div className="container mx-auto">
         <h2 className="section-title text-primary-dark mb-6">How It Works</h2>
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <div 
             ref={containerRef}
-            className="flex flex-col md:flex-row gap-2 md:gap-3 transition-all duration-300 md:overflow-x-auto md:scroll-smooth"
+            className="flex flex-col md:flex-row gap-2 md:gap-3 transition-all duration-300 md:overflow-x-auto scrollbar-hide"
           >
             {steps.map((step, index) => (
               <motion.div
@@ -69,7 +70,26 @@ const ProcessSteps = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 className="w-full md:w-1/4 flex-shrink-0"
               >
-                {/* Rest of step content remains the same */}
+                <div className="flex flex-col items-center p-3 md:p-4 hover:bg-primary/10 transition-colors duration-300 rounded-lg h-full">
+                  <motion.div
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    whileInView={{ scale: 1, opacity: 1 }}
+                    transition={{
+                      duration: 0.5,
+                      delay: index * 0.1,
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 15
+                    }}
+                    className="text-primary text-4xl font-bold mb-2"
+                  >
+                    {step.number}
+                  </motion.div>
+                  <div className="text-center">
+                    <h3 className="text-xl md:text-2xl font-medium text-primary-dark mb-2">{step.title}</h3>
+                    <p className="text-sm md:text-base text-gray-600">{step.description}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
