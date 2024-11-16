@@ -9,11 +9,11 @@ export default defineConfig({
   },
   assetsInclude: ['**/*.ttf', '**/*.jpg'],
   base: "/green_website/",
+  plugins: [react()],
   server: {
     host: "0.0.0.0",
     port: 3612,
   },
-  plugins: [react()],
   resolve: {
     alias: [
       {

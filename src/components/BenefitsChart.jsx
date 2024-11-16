@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
   { year: "1", benefit: 960, fee: 475 },
@@ -29,13 +29,15 @@ const data = [
   { year: "25", benefit: 1545, fee: 763 },
 ];
 
+const filteredData = data.filter(d => [1, 5, 10, 15, 20, 25].includes(parseInt(d.year)));
+
 const BenefitsChart = () => {
   return (
     <section className="section-padding">
       <div className="container mx-auto">
         <h2 className="section-title">Your monthly benefit vs service fee</h2>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -44,11 +46,11 @@ const BenefitsChart = () => {
             className="h-[400px]"
           >
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={data} margin={{ top: 20, right: 30, left: 20, bottom: 20 }}>
+              <LineChart data={data} margin={{ top: 20, right: 10, left: 10, bottom: 20 }}>
                 <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="year" />
-                <YAxis />
-                <Tooltip />
+                <XAxis dataKey="year" ticks={["1", "5", "10", "15", "20", "25"]} label={{ value: "Agreement year", position: "insideBottomRight", offset: -10 }} />
+                <YAxis tickFormatter={(value) => `£${value}`} />
+                <Tooltip formatter={(value) => `£${value}`} />
                 <Legend />
                 <Line
                   type="monotone"
@@ -56,22 +58,24 @@ const BenefitsChart = () => {
                   name="Estimated Monthly Benefit"
                   stroke="#3ca46c"
                   strokeWidth={2}
+                  dot={filteredData.map(d => ({ cx: d.year, cy: d.benefit }))}
                 />
                 <Line
                   type="monotone"
                   dataKey="fee"
                   name="Monthly Service Fee"
-                  stroke="#95e8b2"
+                  stroke="#808080" // Changed to grey
                   strokeWidth={2}
+                  dot={filteredData.map(d => ({ cx: d.year, cy: d.fee }))}
                 />
               </LineChart>
             </ResponsiveContainer>
           </motion.div>
-          <div className="p-4 rounded-lg cente text-left text-gray-600 mt-4 mb-8 border border-gray-300">
-            <p>
+          <div className="p-8 rounded-lg text-left text-gray-800 mt-6 mb-10 border border-gray-400 bg-primary-light/20 shadow-lg">
+            <p className="text-xl font-semibold mb-4">
               For a typical 50kW installation in the South West and a 25 year Solar Service agreement (with early buy-out option at any time), you can expect:
             </p>
-            <ol className="list-decimal list-inside mt-2">
+            <ol className="list-decimal list-inside mt-2 space-y-2 text-lg">
               <li>£186,500 in benefits to your business, net of the service fee, over the term duration</li>
               <li>£475 monthly service fee in Year 1, with positive value guarantee</li>
               <li>£960 per month in benefits to your business in Year 1</li>

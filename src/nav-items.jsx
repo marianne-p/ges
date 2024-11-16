@@ -5,7 +5,7 @@ import { lazy } from "react";
 const Index = lazy(() => import("./pages/Index.jsx"));
 const Comparison = lazy(() => import("./pages/Comparison.jsx"));
 
-export const navItems = [
+const navItems = [
   {
     title: "Home",
     to: "/",
@@ -20,3 +20,5 @@ export const navItems = [
   },
   // Additional routes can be added here
 ];
+
+export default navItems;

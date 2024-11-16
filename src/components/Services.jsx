@@ -1,35 +1,35 @@
 import { motion } from "framer-motion";
-import { Settings2Icon, SunIcon, BarChart3Icon, BuildingIcon, WrenchIcon, PhoneIcon, MonitorPauseIcon, FileIcon, BadgeDollarSign, DollarSignIcon, KeyIcon, BatteryIcon, SaveIcon, IndentDecreaseIcon, CircleArrowOutDownRightIcon, MoveDownIcon, ThumbsUpIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { SquareCheckBig, BadgePoundSterling, ThumbsUp, ChartNoAxesCombined, Wrench, File } from "lucide-react";
 
 const services = [
   {
-    icon: <SunIcon className="h-8 w-8" />,
+    icon: <SquareCheckBig className="h-8 w-8" />,
     title: "No upfront investment",
     description: "Installation fully funded by us, designed with you to meet the needs of your business",
   },
   {
-    icon: <Settings2Icon className="h-8 w-8" />,
+    icon: <BadgePoundSterling className="h-8 w-8" />,
     title: "Benefits go to you",
     description: "Energy used by your business, or sold back to the grid – profits go back to you",
   },
   {
-    icon: <DollarSignIcon className="h-8 w-8" />,
+    icon: <ThumbsUp className="h-8 w-8" />,
     title: "Set monthly service fee",
     description: "You know exactly what the costs will be over time - no surprises",
   },
   {
-    icon: <BarChart3Icon className="h-8 w-8" />,
+    icon: <ChartNoAxesCombined className="h-8 w-8" />,
     title: "Positive value guarantee",
     description: "We guarantee that your benefits will be higher than the service fee, with positive cashflow from Year 1",
   },
   {
-    icon: <ThumbsUpIcon className="h-8 w-8" />,
+    icon: <Wrench className="h-8 w-8" />,
     title: "No ongoing maintenance",
     description: "We manage the installation to ensure peak performance, with no hassle or additional spend by you",
   },
   {
-    icon: <FileIcon className="h-8 w-8" />,
+    icon: <File className="h-8 w-8" />,
     title: "Simple contract",
     description: "No complex leases, waivers or obligations",
   },
@@ -57,11 +57,16 @@ const Services = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               viewport={{ once: true }}
+              className="flex h-full w-full"
             >
-              <Card className="text-center p-6 bg-[#202729] hover:bg-[#3ca46c] transition-colors duration-300">
-                <div className="mb-4 text-[#95e8b2] flex justify-center">{service.icon}</div>
-                <h3 className="text-xl font-light mb-2 text-white font-['Roboto_Flex']">{service.title}</h3>
-                <p className="text-gray-300 font-light font-['Roboto_Flex']">{service.description}</p>
+              <Card className="flex flex-col justify-between text-center p-6 bg-[#202729] hover:bg-[#3ca46c] transition-colors duration-300 h-full w-full">
+                <div className="flex flex-col items-center mb-4">
+                  <div className="text-[#95e8b2] flex justify-center mb-2">{service.icon}</div>
+                  <h3 className="text-xl font-light mb-2 text-white font-['Roboto_Flex']">{service.title}</h3>
+                </div>
+                <div className="flex-grow flex items-center justify-center">
+                  <p className="text-gray-300 font-light font-['Roboto_Flex']">{service.description}</p>
+                </div>
               </Card>
             </motion.div>
           ))}
