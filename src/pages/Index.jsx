@@ -19,6 +19,7 @@ import solarPanel3 from '@/img/solar-panel-3.jpg';
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   const backgroundImages = [
     solarPanel1,
@@ -26,15 +27,29 @@ const Index = () => {
     solarPanel3
   ];
 
+  // Preload images
   useEffect(() => {
+    Promise.all(
+      backgroundImages.map(src => {
+        const img = new Image();
+        img.src = src;
+        return new Promise(resolve => img.onload = resolve);
+      })
+    ).then(() => setImagesLoaded(true));
+  }, []);
+
+  // Image rotation
+  useEffect(() => {
+    if (!imagesLoaded) return;
+    
     const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => 
-        prevIndex === backgroundImages.length - 1 ? 0 : prevIndex + 1
+      setCurrentImageIndex(prev => 
+        prev === backgroundImages.length - 1 ? 0 : prev + 1
       );
     }, 2000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [imagesLoaded]);
 
   return (
     <div className="min-h-screen roboto-flex-light">
