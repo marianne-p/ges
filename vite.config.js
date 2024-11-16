@@ -8,7 +8,7 @@ export default defineConfig({
     include: ['@fontsource/roboto-flex']
   },
   assetsInclude: ['**/*.ttf', '**/*.jpg'],
-  base: "/",
+  base: "/green_website/",
   server: {
     host: "0.0.0.0",
     port: 3612,
