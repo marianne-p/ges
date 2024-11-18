@@ -3,11 +3,8 @@ import { createRoot } from "react-dom/client"; // Use createRoot for React 18+
 import "./index.css";
 import App from "./App.jsx";
 
-// Find the root container in your HTML
-const rootElement = document.getElementById("root");
-
 // Create a root and render the app
-const root = createRoot(rootElement);
+const root = createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
