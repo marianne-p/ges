@@ -29,7 +29,6 @@ const ComparisonPreview = () => {
       <TableHead className="bg-gray-800 text-white text-base">PPA (power purchase agreement)</TableHead>
     </TableRow>
   </TableHeader>
-  {/* Body */}
   <TableBody>
     {/* Repeat for each row */}
     <TableRow className="grid grid-cols-[15%_1fr_1fr_1fr]">
