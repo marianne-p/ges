@@ -35,7 +35,6 @@ const steps = [
 ];
 
 
-
 const ProcessSteps = () => {
   const [showMore, setShowMore] = useState(false);
   const containerRef = useRef(null);
@@ -59,7 +58,7 @@ const ProcessSteps = () => {
         <div className="relative overflow-hidden">
           <div 
             ref={containerRef}
-            className="flex flex-col md:flex-row gap-2 md:gap-3 transition-all duration-300 md:overflow-x-auto scrollbar-hide"
+            className="flex flex-col md:flex-row gap-2 md:gap-3 transition-all duration-300 md:overflow-x-auto scrollbar-hide scrollbar-transparent"
           >
             {steps.map((step, index) => (
               <motion.div
@@ -68,9 +67,9 @@ const ProcessSteps = () => {
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="w-full md:w-1/4 flex-shrink-0"
+                className="w-full md:w-1/4 flex-shrink-1"
               >
-                <div className="flex flex-col items-center p-3 md:p-4 hover:bg-primary/10 transition-colors duration-300 rounded-lg h-full">
+                <div className="flex flex-col items-center p-6 md:p-8 hover:bg-primary/10 transition-colors duration-300 rounded-lg h-full">
                   <motion.div
                     initial={{ scale: 0.5, opacity: 0 }}
                     whileInView={{ scale: 1, opacity: 1 }}
@@ -98,7 +97,24 @@ const ProcessSteps = () => {
             <button
               onClick={handleScroll}
               aria-label={showMore ? "Show less steps" : "Show more steps"}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-primary/10 p-2 rounded-full hover:bg-primary/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-primary-dark/80              /* Custom scrollbar styles */
+              .scrollbar-transparent::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+              }
+              
+              .scrollbar-transparent::-webkit-scrollbar-track {
+                background: transparent;
+              }
+              
+              .scrollbar-transparent::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0.2);
+                border-radius: 4px;
+              }
+              
+              .scrollbar-transparent::-webkit-scrollbar-thumb:hover {
+                background: rgba(0, 0, 0, 0.4);
+              } text-white p-2 rounded-full hover:bg-primary/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
             >
               <span className="text-xl">{showMore ? "←" : "→"}</span>
             </button>

@@ -72,13 +72,19 @@ const BenefitsChart = () => {
             </ResponsiveContainer>
           </motion.div>
           <div className="p-8 rounded-lg text-left text-gray-800 mt-6 mb-10 border border-gray-400 bg-primary-light/20 shadow-lg">
-            <p className="text-xl font-semibold mb-4">
-              For a typical 50kW installation in the South West and a 25 year Solar Service agreement (with early buy-out option at any time), you can expect:
+            <p className="text-xl mb-4">
+              For a <span className="font-bold">typical 50kW installation</span> in the South West and a <span className="font-bold">25 year Solar Service agreement</span> (with early buy-out option at any time), you can expect:
             </p>
             <ol className="list-decimal list-inside mt-2 space-y-2 text-lg">
-              <li>£186,500 in benefits to your business, net of the service fee, over the term duration</li>
-              <li>£475 monthly service fee in Year 1, with positive value guarantee</li>
-              <li>£960 per month in benefits to your business in Year 1</li>
+              <li>
+                <span className="font-bold">£186,500</span> in benefits to your business, net of the service fee, over the term duration
+              </li>
+              <li>
+                <span className="font-bold">£475</span> monthly service fee in Year 1, with positive value guarantee
+              </li>
+              <li>
+                <span className="font-bold">£960</span> per month in benefits to your business in Year 1
+              </li>
             </ol>
           </div>
         </div>
