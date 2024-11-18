@@ -11,7 +11,7 @@ const App = () => (
   <ErrorBoundary>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Router basename="/green_website">
+        <Router basename="/ges">
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
               <Route path="/comparison" element={<Comparison />} />
