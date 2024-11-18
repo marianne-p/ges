@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -13,7 +14,7 @@ const Comparison = () => {
         <div className="flex justify-end mb-4">
           <Button
             variant="outline"
-            onClick={() => navigate("/#comparison-preview")}
+            onClick={() => navigate("/ges/")}
             className="hover:bg-primary hover:text-white"
           >
             <XIcon className="h-5 w-5" />

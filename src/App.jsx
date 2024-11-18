@@ -1,11 +1,12 @@
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { TooltipProvider } from '@radix-ui/react-tooltip';
-import { Suspense } from 'react';
 import ErrorBoundary from './components/ErrorBoundary';
-import Comparison from './pages/Comparison';
 import navItems from './nav-items.jsx';
 import queryClient from './queryClient'; // Import the queryClient instance
+
+const Comparison = lazy(() => import('./pages/Comparison'));
 
 const App = () => (
   <ErrorBoundary>

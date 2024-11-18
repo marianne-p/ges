@@ -18,12 +18,6 @@ const navItems = [
     icon: <InfoIcon className="h-4 w-4" />,
     page: <Comparison />,
   },
-  {
-    title: "Comparison Preview",
-    to: "/#comparison-preview",
-    icon: <InfoIcon className="h-4 w-4" />,
-    page: <Index />, // Ensure this points to the correct page component
-  },
   // Additional routes can be added here
 ];
 
