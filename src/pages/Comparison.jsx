@@ -14,7 +14,7 @@ const Comparison = () => {
         <div className="flex justify-end mb-4">
           <Button
             variant="outline"
-            onClick={() => navigate(".")}
+            onClick={() => navigate("/")}
             className="hover:bg-primary hover:text-white"
           >
             <XIcon className="h-5 w-5" />

@@ -54,7 +54,7 @@ const ComparisonPreview = () => {
           <div className="text-center mt-8">
             <Button
               variant="outline"
-              onClick={() => navigate("/comparison/")}
+              onClick={() => navigate("/comparison")}
               className="hover:bg-gray-800 hover:text-white text-base"
             >
               See Full Comparison
