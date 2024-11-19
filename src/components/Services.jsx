@@ -31,7 +31,7 @@ const services = [
   {
     icon: <File className="h-8 w-8" />,
     title: "Simple contract",
-    description: "No complex leases, waivers or obligations",
+    description: "We manage the installation and its performance, with no hassle or additional spend by you",
   },
 ];
 

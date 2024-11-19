@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   return (
-    <Link to="https://docs.google.com/forms/d/e/1FAIpQLSe0UnpRFummeS0BjVwyTruARq4Qx9jyqEowT6hr2iDAjXtihQ/viewform">
+    <Link to="https://docs.google.com/forms/d/e/1FAIpQLScTb4tKEV0NG6QeC_ttk9nRanUrP5myAsFGsOhWPXzebT7CxQ/viewform">
       <motion.section
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
