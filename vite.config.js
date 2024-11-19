@@ -8,7 +8,7 @@ export default defineConfig({
     include: ['@fontsource/roboto-flex']
   },
   assetsInclude: ['**/*.ttf', '**/*.jpg'],
-  base: "/",
+  base: "/ges/",
   plugins: [react()],
   server: {
     host: "0.0.0.0",
