@@ -22,13 +22,13 @@ const AboutUs = () => {
               </div>
     
               {/* Right column - SunGift logo */}
-              <div className="md:w-[40%] flex flex-col justify-center items-right">
-                <p className="text-gray-600 text-right text-s mb-6">   In partnership with:   </p>
+              <div className="md:w-[30%] flex flex-col justify-center items-right">
+                <p className="text-gray-600 text-center text-s mb-6">   In partnership with:   </p>
                 <a href="https://www.sungiftsolar.co.uk" target="_blank" rel="noopener noreferrer">
                   <img 
                     src={sunGiftLogo}
                     alt="SunGift Solar Logo" 
-                    className="max-w-[400px] object-contain"
+                    className="w-full max-w-[300px] object-contain"
                   />
                 </a>
               </div>

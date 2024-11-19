@@ -1,6 +1,7 @@
 // src/components/ProcessSteps.jsx
 import { useState, useRef } from 'react';
 import { motion } from "framer-motion";
+
 const steps = [
   {
     number: "01",
@@ -34,94 +35,33 @@ const steps = [
   },
 ];
 
-
 const ProcessSteps = () => {
-  const [showMore, setShowMore] = useState(false);
-  const containerRef = useRef(null);
-
-  const handleScroll = () => {
-    if (containerRef.current) {
-      const container = containerRef.current;
-      const scrollAmount = showMore ? 0 : container.scrollWidth - container.clientWidth;
-      container.scrollTo({
-        left: scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-    setShowMore(!showMore);
-  };
-
   return (
-    <section className="py-4 bg-primary/5">
-      <div className="container mx-auto">
-        <h2 className="section-title text-primary-dark mb-6">How It Works</h2>
-        <div className="relative overflow-hidden">
-          <div 
-            ref={containerRef}
-            className="flex flex-col md:flex-row gap-2 md:gap-3 transition-all duration-300 md:overflow-x-auto scrollbar-hide scrollbar-transparent"
-          >
-            {steps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                className="w-full md:w-1/4 flex-shrink-1"
-              >
-                <div className="flex flex-col items-center p-6 md:p-8 hover:bg-primary/10 transition-colors duration-300 rounded-lg h-full">
-                  <motion.div
-                    initial={{ scale: 0.5, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{
-                      duration: 0.5,
-                      delay: index * 0.1,
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 15
-                    }}
-                    className="text-primary text-4xl font-bold mb-2"
-                  >
-                    {step.number}
-                  </motion.div>
-                  <div className="text-center">
-                    <h3 className="text-xl md:text-2xl font-medium text-primary-dark mb-2">{step.title}</h3>
-                    <p className="text-sm md:text-base text-gray-600">{step.description}</p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+    <div className="container mx-auto py-8">
+      <div className="space-y-6 relative"> {/* Changed from space-y-12 to space-y-6 */}
+        {steps.map((step, index) => (
+          <div key={step.number} className="relative">
+            <div className="flex items-center bg-primary-light/10 p-6 rounded-lg hover:shadow-lg transition-all duration-300 relative z-10">
+              <span className="text-4xl font-bold text-primary-dark w-20">
+                {step.number}
+              </span>
+              <h3 className="text-xl font-semibold text-primary-dark w-1/3 px-6">
+                {step.title}
+              </h3>
+              <p className="text-base text-primary-dark/80 flex-1">
+                {step.description}
+              </p>
+            </div>
+            
+            {index < steps.length - 1 && (
+              <div className="absolute left-10 top-full h-6 w-0.5 bg-primary-dark/20"> {/* Changed from h-12 to h-6 */}
+                <div className="absolute -left-1.5 bottom-0 h-3 w-3 rounded-full bg-primary-dark/40" />
+              </div>
+            )}
           </div>
-          
-          {steps.length > 4 && (
-            <button
-              onClick={handleScroll}
-              aria-label={showMore ? "Show less steps" : "Show more steps"}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-primary-dark/80              /* Custom scrollbar styles */
-              .scrollbar-transparent::-webkit-scrollbar {
-                width: 8px;
-                height: 8px;
-              }
-              
-              .scrollbar-transparent::-webkit-scrollbar-track {
-                background: transparent;
-              }
-              
-              .scrollbar-transparent::-webkit-scrollbar-thumb {
-                background: rgba(0, 0, 0, 0.2);
-                border-radius: 4px;
-              }
-              
-              .scrollbar-transparent::-webkit-scrollbar-thumb:hover {
-                background: rgba(0, 0, 0, 0.4);
-              } text-white p-2 rounded-full hover:bg-primary/20 transition-colors focus:outline-none focus:ring-2 focus:ring-primary"
-            >
-              <span className="text-xl">{showMore ? "←" : "→"}</span>
-            </button>
-          )}
-        </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
