@@ -15,7 +15,7 @@ const App = () => (
         <Router basename="/">
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-              <Route path="/comparison" element={<Comparison />} />
+              <Route path="/comparison/" element={<Comparison />} />
               {navItems.map(({ to, page }) => (
                 <Route key={to} path={to} element={page} />
               ))}
