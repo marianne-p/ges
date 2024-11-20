@@ -22,8 +22,8 @@ const ContactForm = () => {
             Get a Quote
           </h2>
           <div className="flex items-center justify-center w-full text-white text-lg">
-            <Sun className="h-10 w-10 mr-2" />
-            Click Here to Fill Out the Form and we will get in touch with you
+            <Sun className="h-10 w-10 mr-2 capitalize" />
+            Click here to fill out a form and we will get in touch with you
           </div>
         </div>
       </motion.section>

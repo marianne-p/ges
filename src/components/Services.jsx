@@ -26,12 +26,12 @@ const services = [
   {
     icon: <Wrench className="h-8 w-8" />,
     title: "No ongoing maintenance",
-    description: "We manage the installation to ensure peak performance, with no hassle or additional spend by you",
+    description: "We manage the installation and its performance, with no hassle or additional spend by you",
   },
   {
     icon: <File className="h-8 w-8" />,
     title: "Simple contract",
-    description: "We manage the installation and its performance, with no hassle or additional spend by you",
+    description: "No complex leases, waivers or obligations",
   },
 ];
 

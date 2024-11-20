@@ -9,7 +9,6 @@ import BenefitsChart from "@/components/BenefitsChart";
 import ContactForm from "@/components/ContactForm";
 import AboutUs from "@/components/AboutUs";
 import Footer from "@/components/Footer";
-import favicon from "./../../favicon.ico";
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import solarPanel1 from '@/img/solar-panel-1.jpg';
@@ -17,17 +16,12 @@ import solarPanel2 from '@/img/solar-panel-2.jpg';
 import solarPanel3 from '@/img/solar-panel-3.jpg';
 
 const Index = () => {
-  const [isVisible, setIsVisible] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [prevImageIndex, setPrevImageIndex] = useState(2);
   const [imagesLoaded, setImagesLoaded] = useState(false);
   
-  const backgroundImages = [
-    solarPanel1,
-    solarPanel2,
-    solarPanel3
-  ];
+  const backgroundImages = [solarPanel1, solarPanel2, solarPanel3];
 
-  // Preload images
   useEffect(() => {
     Promise.all(
       backgroundImages.map(src => {
@@ -38,26 +32,41 @@ const Index = () => {
     ).then(() => setImagesLoaded(true));
   }, []);
 
-  // Image rotation
   useEffect(() => {
     if (!imagesLoaded) return;
     
     const interval = setInterval(() => {
+      setPrevImageIndex(currentImageIndex);
       setCurrentImageIndex(prev => 
         prev === backgroundImages.length - 1 ? 0 : prev + 1
       );
-    }, 2000);
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, [imagesLoaded]);
+  }, [imagesLoaded, currentImageIndex]);
 
   return (
     <div className="min-h-screen roboto-flex-light">
-      {/* Hero Section */}
       <section className="relative">
-        <div 
-          className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease"
-          style={{ backgroundImage: `url(${backgroundImages[currentImageIndex]})`, opacity: isVisible }}
+        {/* Previous image layer */}
+        <motion.div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${backgroundImages[prevImageIndex]})`
+          }}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        />
+        {/* Current image layer */}
+        <motion.div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${backgroundImages[currentImageIndex]})`
+          }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-dark to-primary/70"></div>
         <div className="relative text-white section-padding min-h-[80vh] flex items-center">
