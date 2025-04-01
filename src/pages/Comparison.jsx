@@ -52,7 +52,7 @@ const Comparison = () => {
               </TableRow>
               <TableRow className="grid grid-cols-[15%_1fr_1fr_1fr]">
                 <TableCell className="bg-gray-800 text-white text-base ">Who is it good for</TableCell>
-                <TableCell className="bg-primary-light/30 text-base ">Customers who want the benefits of solar, but prefer to focus their expertise and capital on their core business activities.</TableCell>
+                <TableCell className="bg-primary-light/30 text-base ">Customers who want the benefits of solar, but prefer to focus their expertise and capital on their core activities.</TableCell>
                 <TableCell className="text-base ">Customers who want to own the assets within several years and manage the installation themselves.</TableCell>
                 <TableCell className="text-base ">Customers who want slightly cheaper energy rates and certainty of future costs, in exchange for less overall benefit.</TableCell>
               </TableRow>
@@ -82,7 +82,7 @@ const Comparison = () => {
               </TableRow>
               <TableRow className="grid grid-cols-[15%_1fr_1fr_1fr]">
                 <TableCell className="bg-gray-800 text-white text-base ">Performance risk</TableCell>
-                <TableCell className="bg-primary-light/30 text-base ">Managed by us - positive value guarantee means the business always benefits</TableCell>
+                <TableCell className="bg-primary-light/30 text-base ">Managed by us - positive value guarantee means the organisation always benefits</TableCell>
                 <TableCell className="text-base ">All risks taken by the customer</TableCell>
                 <TableCell className="text-base ">Typically shared between the customer (usage commitments) and the PPA provider (maintenance risks)</TableCell>
               </TableRow>
