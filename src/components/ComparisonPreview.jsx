@@ -45,7 +45,7 @@ const ComparisonPreview = () => {
               </TableRow>
               <TableRow className="grid grid-cols-[15%_1fr_1fr_1fr]">
                 <TableCell className="bg-gray-800 text-white text-base">Who is it good for</TableCell>
-                <TableCell className="bg-primary-light/30 text-base">Customers who want the benefits of solar, but prefer to focus their expertise and capital on their core business activities.</TableCell>
+                <TableCell className="bg-primary-light/30 text-base">Customers who want the benefits of solar, but prefer to focus their expertise and capital on their core activities.</TableCell>
                 <TableCell className="text-base">Customers who want to own the assets within several years and manage the installation themselves.</TableCell>
                 <TableCell className="text-base">Customers who want slightly cheaper energy rates and certainty of future costs, in exchange for less overall benefit.</TableCell>
               </TableRow>
