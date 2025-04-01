@@ -16,7 +16,7 @@ const steps = [
   {
     number: "03",
     title: "We pay for the installation",
-    description: "No upfront investment from your business",
+    description: "No upfront investment from your organisation",
   },
   {
     number: "04",
@@ -26,7 +26,7 @@ const steps = [
   {
     number: "05",
     title: "We monitor and maintain the installation",
-    description: "We manage everything to keep the installation in optimal condition, so you can focus on your core business",
+    description: "We manage everything to keep the installation in optimal condition, so you can focus on your core activities",
   },
   {
     number: "06",
