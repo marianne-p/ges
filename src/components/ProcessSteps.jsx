@@ -6,22 +6,22 @@ const steps = [
   {
     number: "01",
     title: "Apply for our solar service",
-    description: "Fast application and approval online or via SunGift Solar",
+    description: "Fast application and approval online for an installation tailored to your requirements",
   },
   {
     number: "02",
     title: "Get your equipment installed",
-    description: "SunGift Solar carries out the installation",
+    description: "Installation carried out by an award-winning local installer",
   },
   {
     number: "03",
-    title: "We pay SunGift Solar",
+    title: "We pay for the installation",
     description: "No upfront investment from your business",
   },
   {
     number: "04",
     title: "Start benefiting from free energy",
-    description: "Use what you can and sell any excess to the grid",
+    description: "Use what you need and sell any excess to the grid",
   },
   {
     number: "05",
