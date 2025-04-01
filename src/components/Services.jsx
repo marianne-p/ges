@@ -9,6 +9,11 @@ const services = [
     description: "Installation fully funded by us, designed with you to meet the needs of your business",
   },
   {
+    icon: <Wrench className="h-8 w-8" />,
+    title: "No ongoing maintenance",
+    description: "We manage the installation and its performance, with no hassle or additional spend by you",
+  },
+  {
     icon: <BadgePoundSterling className="h-8 w-8" />,
     title: "Benefits go to you",
     description: "Energy used by your business, or sold back to the grid – profits go back to you",
@@ -22,11 +27,6 @@ const services = [
     icon: <ChartNoAxesCombined className="h-8 w-8" />,
     title: "Positive value guarantee",
     description: "We guarantee that your benefits will be higher than the service fee, with positive cashflow from Year 1",
-  },
-  {
-    icon: <Wrench className="h-8 w-8" />,
-    title: "No ongoing maintenance",
-    description: "We manage the installation and its performance, with no hassle or additional spend by you",
   },
   {
     icon: <File className="h-8 w-8" />,
