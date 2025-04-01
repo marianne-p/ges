@@ -81,7 +81,7 @@ const Index = () => {
               className="text-left max-w-2xl"
             >
               <h1 className="text-4xl sm:text-6xl font-medium mb-6 light-300">
-                Innovation that unlocks solar benefits for your organisation
+                Innovation that unlocks solar for your organisation
               </h1>
               <p className="text-xl mb-8">
                 All-inclusive management of solar installations, so you can focus on your core activities while benefitting from green energy
