@@ -82,7 +82,7 @@ const Comparison = () => {
               </TableRow>
               <TableRow className="grid grid-cols-[15%_1fr_1fr_1fr]">
                 <TableCell className="bg-gray-800 text-white text-base ">Performance risk</TableCell>
-                <TableCell className="bg-primary-light/30 text-base ">Managed by us - positive value guarantee means the organisation always benefits</TableCell>
+                <TableCell className="bg-primary-light/30 text-base ">Managed by us - positive value guarantee means the customer organisation always benefits</TableCell>
                 <TableCell className="text-base ">All risks taken by the customer</TableCell>
                 <TableCell className="text-base ">Typically shared between the customer (usage commitments) and the PPA provider (maintenance risks)</TableCell>
               </TableRow>
