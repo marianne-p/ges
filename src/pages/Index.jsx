@@ -81,10 +81,10 @@ const Index = () => {
               className="text-left max-w-2xl"
             >
               <h1 className="text-4xl sm:text-6xl font-medium mb-6 light-300">
-                Unlock the Benefits of Solar for Your Business
+                Innovation that Unlocks the Benefits of Solar for Your Organisation
               </h1>
               <p className="text-xl mb-8">
-                End-to-end management of solar installations, so you can focus on your core business
+                All-inclusive management of solar installations, so you can focus on your core activities while benefitting from green energy
               </p>
               <Button
                 size="lg"
