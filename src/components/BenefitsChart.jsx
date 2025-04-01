@@ -77,13 +77,13 @@ const BenefitsChart = () => {
             </p>
             <ol className="list-decimal list-inside mt-2 space-y-2 text-lg">
               <li>
-                <span className="font-bold">£186,500 in benefits to your business</span>, net of the service fee, over the term duration
+                <span className="font-bold">£186,500 in benefits to your organisation</span>, net of the service fee, over the term duration
               </li>
               <li>
                 <span className="font-bold">£475 monthly service fee</span> in Year 1, with <span className="font-bold">positive value guarantee</span>
               </li>
               <li>
-                <span className="font-bold">£960 per month</span> in <span className="font-bold">benefits to your business</span> in Year 1
+                <span className="font-bold">£960 per month</span> in <span className="font-bold">benefits to your organisation</span> in Year 1, i.e. £485 per month net of the service fee
               </li>
             </ol>
           </div>
