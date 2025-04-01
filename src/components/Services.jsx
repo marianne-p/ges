@@ -6,7 +6,7 @@ const services = [
   {
     icon: <SquareCheckBig className="h-8 w-8" />,
     title: "No upfront investment",
-    description: "Installation fully funded by us, designed with you to meet the needs of your business",
+    description: "Installation fully funded by us, designed with you to meet the needs of your organisation",
   },
   {
     icon: <Wrench className="h-8 w-8" />,
@@ -16,7 +16,7 @@ const services = [
   {
     icon: <BadgePoundSterling className="h-8 w-8" />,
     title: "Benefits go to you",
-    description: "Energy used by your business, or sold back to the grid – profits go back to you",
+    description: "Energy used by your organisation, or sold back to the grid – profits go back to you",
   },
   {
     icon: <ThumbsUp className="h-8 w-8" />,
