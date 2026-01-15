@@ -31,6 +31,7 @@ const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-xl font-medium text-white mb-4">Company Info</h3>
             <p>Company No. 16055496, registered in England and Wales</p>
+            <p>VAT No. 507 9513 80</p>
           </div>
         </div>
         
