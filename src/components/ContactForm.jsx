@@ -19,11 +19,11 @@ const ContactForm = () => {
       >
         <div className="container mx-auto max-w-2xl">
           <h2 className="text-3xl sm:text-4xl font-medium text-white mb-8 text-center">
-            Get a Quote
+            Get in Touch
           </h2>
           <div className="flex items-center justify-center w-full text-white text-lg">
             <Sun className="h-10 w-10 mr-2 capitalize" />
-            Click here to fill out a form and we will get in touch with you
+            Click here to get in touch with us and we will get back to you
           </div>
         </div>
       </motion.section>
