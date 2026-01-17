@@ -77,16 +77,16 @@ const BenefitsChart = () => {
             </p>
             <ol className="list-decimal list-inside mt-2 space-y-2 text-lg">
               <li>
-                <span className="font-bold">£252,000 in benefits (net of service sees)</span> for your organisation over the term duration
+                <span className="font-bold">£252,000 in benefits (net of service fees)</span> for your organisation over the term duration
               </li>
               <li>
                 <span className="font-bold">Year 1 benefits of £9,600</span> in electricity savings and export revenues
               </li>
               <li>
-                <span className="font-bold">£5,200 annual service fee</span> in Year 1, with <span className="font-bold">Positive Value Guarantee</span> - your benefits will always be more
+                <span className="font-bold">£5,200 annual service fee</span> in Year 1, with <span className="font-bold">Positive Value Guarantee</span> - your benefits will always be more that the fees
               </li>
               <li>
-                <span className="font-bold">Positive cash flow</span> for your organisation from <span className="font-bold">Day 1</span>
+                <span className="font-bold">Positive cashflow</span> for your organisation from <span className="font-bold">Day 1</span>
               </li>
 
             </ol>
