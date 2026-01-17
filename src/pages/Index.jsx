@@ -86,7 +86,7 @@ const Index = () => {
               <p className="text-xl mb-8">
                 UK’s only Solar Service with Positive Value Guaranteed from Day 1. 
                 <br />
-                All-inclusive management of solar installations, so you can focus on your core activities while benefitting from green energy
+                All-inclusive management of solar installations, so you can focus on your core activities while benefitting from green energy.
               </p>
               <Button
                 size="lg"
