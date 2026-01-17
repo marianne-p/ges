@@ -2,31 +2,31 @@ import { motion } from "framer-motion";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { year: "1", benefit: 960, fee: 475 },
-  { year: "2", benefit: 979, fee: 484 },
-  { year: "3", benefit: 999, fee: 494 },
-  { year: "4", benefit: 1019, fee: 504 },
-  { year: "5", benefit: 1039, fee: 514 },
-  { year: "6", benefit: 1060, fee: 524 },
-  { year: "7", benefit: 1081, fee: 535 },
-  { year: "8", benefit: 1103, fee: 545 },
-  { year: "9", benefit: 1125, fee: 556 },
-  { year: "10", benefit: 1148, fee: 567 },
-  { year: "11", benefit: 1171, fee: 579 },
-  { year: "12", benefit: 1194, fee: 590 },
-  { year: "13", benefit: 1218, fee: 602 },
-  { year: "14", benefit: 1242, fee: 614 },
-  { year: "15", benefit: 1267, fee: 626 },
-  { year: "16", benefit: 1292, fee: 639 },
-  { year: "17", benefit: 1318, fee: 652 },
-  { year: "18", benefit: 1345, fee: 665 },
-  { year: "19", benefit: 1372, fee: 678 },
-  { year: "20", benefit: 1399, fee: 691 },
-  { year: "21", benefit: 1427, fee: 705 },
-  { year: "22", benefit: 1455, fee: 719 },
-  { year: "23", benefit: 1485, fee: 734 },
-  { year: "24", benefit: 1514, fee: 748 },
-  { year: "25", benefit: 1545, fee: 763 },
+  { year: "1", benefit: 9575, fee: 4800 },
+  { year: "2", benefit: 9966, fee: 4944 },
+  { year: "3", benefit: 10435, fee: 5092 },
+  { year: "4", benefit: 10926, fee: 5245 },
+  { year: "5", benefit: 11440, fee: 5402 },
+  { year: "6", benefit: 11980, fee: 5565 },
+  { year: "7", benefit: 12547, fee: 5731 },
+  { year: "8", benefit: 13141, fee: 5903 },
+  { year: "9", benefit: 13764, fee: 6080 },
+  { year: "10", benefit: 14417, fee: 6263 },
+  { year: "11", benefit: 15103, fee: 6451 },
+  { year: "12", benefit: 15822, fee: 6644 },
+  { year: "13", benefit: 16576, fee: 6844 },
+  { year: "14", benefit: 17368, fee: 7049 },
+  { year: "15", benefit: 18198, fee: 7260 },
+  { year: "16", benefit: 19069, fee: 7478 },
+  { year: "17", benefit: 19983, fee: 7703 },
+  { year: "18", benefit: 20941, fee: 7934 },
+  { year: "19", benefit: 21947, fee: 8172 },
+  { year: "20", benefit: 23003, fee: 8417 },
+  { year: "21", benefit: 24110, fee: 8669 },
+  { year: "22", benefit: 25272, fee: 8929 },
+  { year: "23", benefit: 26492, fee: 9197 },
+  { year: "24", benefit: 27771, fee: 9473 },
+  { year: "25", benefit: 29114, fee: 9757 },
 ];
 
 const filteredData = data.filter(d => [1, 5, 10, 15, 20, 25].includes(parseInt(d.year)));
@@ -35,7 +35,7 @@ const BenefitsChart = () => {
   return (
     <section className="section-padding">
       <div className="container mx-auto">
-        <h2 className="section-title">Your monthly benefit vs service fee</h2>
+        <h2 className="section-title">Example: your benefits over time</h2>
 
         <div className="max-w-4xl mx-auto w-full">
           <motion.div
@@ -55,7 +55,7 @@ const BenefitsChart = () => {
                 <Line
                   type="monotone"
                   dataKey="benefit"
-                  name="Estimated Monthly Benefit"
+                  name="Your Annual Benefits"
                   stroke="#3ca46c"
                   strokeWidth={2}
                   dot={filteredData.map(d => ({ cx: d.year, cy: d.benefit }))}
@@ -63,7 +63,7 @@ const BenefitsChart = () => {
                 <Line
                   type="monotone"
                   dataKey="fee"
-                  name="Monthly Service Fee"
+                  name="Annual Service Fee"
                   stroke="#808080" // Changed to grey
                   strokeWidth={2}
                   dot={filteredData.map(d => ({ cx: d.year, cy: d.fee }))}
@@ -73,18 +73,22 @@ const BenefitsChart = () => {
           </motion.div>
           <div className="p-8 rounded-lg text-left text-gray-800 mt-6 mb-10 border border-gray-400 bg-primary-light/20 shadow-lg">
             <p className="text-xl mb-4">
-              For a <span className="font-bold">typical 50kW installation</span> in the South West and a <span className="font-bold">25 year Solar Service agreement</span> (with early buy-out option at any time), you can expect:
+              For a <span className="font-bold">typical 50kW installation</span> and a <span className="font-bold">25 year Solar Service agreement</span> (with early buy-out option at any time), you can expect:
             </p>
             <ol className="list-decimal list-inside mt-2 space-y-2 text-lg">
               <li>
-                <span className="font-bold">£186,500 in benefits to your organisation</span>, net of the service fee, over the term duration
+                <span className="font-bold">£265,000 in benefits to your organisation (net of the service sees)</span> over the term duration
               </li>
               <li>
-                <span className="font-bold">£475 monthly service fee</span> in Year 1, with <span className="font-bold">positive value guarantee</span>
+                <span className="font-bold">£9,600 in electricity savings and export revenues for you</span> in Year 1
               </li>
               <li>
-                <span className="font-bold">£960 per month</span> in <span className="font-bold">benefits to your organisation</span> in Year 1, i.e. £485 per month net of the service fee
+                <span className="font-bold">£4,800 annual service fee</span> in Year 1, with <span className="font-bold">Positive Value Guarantee</span> - your benefits will always be more
               </li>
+              <li>
+                <span className="font-bold">Positive cash flow</span> for you from <span className="font-bold">Day 1</span>
+              </li>
+
             </ol>
           </div>
         </div>
