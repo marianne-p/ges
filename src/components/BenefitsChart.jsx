@@ -2,31 +2,31 @@ import { motion } from "framer-motion";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { year: "1", benefit: 9575, fee: 4800 },
-  { year: "2", benefit: 9966, fee: 4944 },
-  { year: "3", benefit: 10435, fee: 5092 },
-  { year: "4", benefit: 10926, fee: 5245 },
-  { year: "5", benefit: 11440, fee: 5402 },
-  { year: "6", benefit: 11980, fee: 5565 },
-  { year: "7", benefit: 12547, fee: 5731 },
-  { year: "8", benefit: 13141, fee: 5903 },
-  { year: "9", benefit: 13764, fee: 6080 },
-  { year: "10", benefit: 14417, fee: 6263 },
-  { year: "11", benefit: 15103, fee: 6451 },
-  { year: "12", benefit: 15822, fee: 6644 },
-  { year: "13", benefit: 16576, fee: 6844 },
-  { year: "14", benefit: 17368, fee: 7049 },
-  { year: "15", benefit: 18198, fee: 7260 },
-  { year: "16", benefit: 19069, fee: 7478 },
-  { year: "17", benefit: 19983, fee: 7703 },
-  { year: "18", benefit: 20941, fee: 7934 },
-  { year: "19", benefit: 21947, fee: 8172 },
-  { year: "20", benefit: 23003, fee: 8417 },
-  { year: "21", benefit: 24110, fee: 8669 },
-  { year: "22", benefit: 25272, fee: 8929 },
-  { year: "23", benefit: 26492, fee: 9197 },
-  { year: "24", benefit: 27771, fee: 9473 },
-  { year: "25", benefit: 29114, fee: 9757 },
+  { year: "1", benefit: 9575, fee: 5160 },
+  { year: "2", benefit: 9966, fee: 5315 },
+  { year: "3", benefit: 10435, fee: 5474 },
+  { year: "4", benefit: 10926, fee: 5638 },
+  { year: "5", benefit: 11440, fee: 5808 },
+  { year: "6", benefit: 11980, fee: 5982 },
+  { year: "7", benefit: 12547, fee: 6161 },
+  { year: "8", benefit: 13141, fee: 6346 },
+  { year: "9", benefit: 13764, fee: 6537 },
+  { year: "10", benefit: 14417, fee: 6733 },
+  { year: "11", benefit: 15103, fee: 6935 },
+  { year: "12", benefit: 15822, fee: 7143 },
+  { year: "13", benefit: 16576, fee: 7357 },
+  { year: "14", benefit: 17368, fee: 7578 },
+  { year: "15", benefit: 18198, fee: 7805 },
+  { year: "16", benefit: 19069, fee: 8039 },
+  { year: "17", benefit: 19983, fee: 8280 },
+  { year: "18", benefit: 20941, fee: 8529 },
+  { year: "19", benefit: 21947, fee: 8785 },
+  { year: "20", benefit: 23003, fee: 9048 },
+  { year: "21", benefit: 24110, fee: 9320 },
+  { year: "22", benefit: 25272, fee: 9599 },
+  { year: "23", benefit: 26492, fee: 9887 },
+  { year: "24", benefit: 27771, fee: 10184 },
+  { year: "25", benefit: 29114, fee: 10489 },
 ];
 
 const filteredData = data.filter(d => [1, 5, 10, 15, 20, 25].includes(parseInt(d.year)));
@@ -77,16 +77,16 @@ const BenefitsChart = () => {
             </p>
             <ol className="list-decimal list-inside mt-2 space-y-2 text-lg">
               <li>
-                <span className="font-bold">£265,000 in benefits to your organisation (net of the service sees)</span> over the term duration
+                <span className="font-bold">£252,000 in benefits (net of service sees)</span> for your organisation over the term duration
               </li>
               <li>
-                <span className="font-bold">£9,600 in electricity savings and export revenues for you</span> in Year 1
+                <span className="font-bold">Year 1 benefits of £9,600</span> in electricity savings and export revenues
               </li>
               <li>
-                <span className="font-bold">£4,800 annual service fee</span> in Year 1, with <span className="font-bold">Positive Value Guarantee</span> - your benefits will always be more
+                <span className="font-bold">£5,200 annual service fee</span> in Year 1, with <span className="font-bold">Positive Value Guarantee</span> - your benefits will always be more
               </li>
               <li>
-                <span className="font-bold">Positive cash flow</span> for you from <span className="font-bold">Day 1</span>
+                <span className="font-bold">Positive cash flow</span> for your organisation from <span className="font-bold">Day 1</span>
               </li>
 
             </ol>
