@@ -32,7 +32,7 @@ const Comparison = () => {
             <TableHeader>
               <TableRow className="bg-gray-800 text-white grid grid-cols-[15%_1fr_1fr_1fr]">
                 <TableHead className="bg-gray-800 text-white text-base "> </TableHead>
-                <TableHead className="bg-gray-800 text-white text-base ">Solar service solution</TableHead>
+                <TableHead className="bg-gray-800 text-white text-base ">Solar service</TableHead>
                 <TableHead className="bg-gray-800 text-white text-base ">Asset finance (lease / hire purchase)</TableHead>
                 <TableHead className="bg-gray-800 text-white text-base ">PPA (power purchase agreement)</TableHead>
               </TableRow>
