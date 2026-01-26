@@ -24,7 +24,7 @@ const ComparisonPreview = () => {
       {/* Narrow leftmost column */}
       <TableHead className="bg-gray-800 text-white text-base"> </TableHead>
       {/* Equal-width columns */}
-      <TableHead className="bg-gray-800 text-white text-base">Solar service solution</TableHead>
+      <TableHead className="bg-gray-800 text-white text-base">Solar service</TableHead>
       <TableHead className="bg-gray-800 text-white text-base">Asset finance (lease / hire purchase)</TableHead>
       <TableHead className="bg-gray-800 text-white text-base">PPA (power purchase agreement)</TableHead>
     </TableRow>
