@@ -30,7 +30,7 @@ const steps = [
   },
   {
     number: "06",
-    title: "Pay monthly, get positive value",
+    title: "Get positive value, guaranteed",
     description: "We guarantee your benefits will be higher than the service fee",
   },
 ];
