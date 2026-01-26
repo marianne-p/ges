@@ -20,7 +20,7 @@ const services = [
   },
   {
     icon: <ThumbsUp className="h-8 w-8" />,
-    title: "Set monthly service fee",
+    title: "Fixed service fee",
     description: "You know exactly what the costs will be over time - no surprises",
   },
   {
