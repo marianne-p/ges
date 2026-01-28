@@ -24,7 +24,7 @@ const ComparisonPreview = () => {
       {/* Narrow leftmost column */}
       <TableHead className="bg-gray-800 text-white text-base"> </TableHead>
       {/* Equal-width columns */}
-      <TableHead className="bg-gray-800 text-white text-base">Solar service solution</TableHead>
+      <TableHead className="bg-gray-800 text-white text-base">Solar service</TableHead>
       <TableHead className="bg-gray-800 text-white text-base">Asset finance (lease / hire purchase)</TableHead>
       <TableHead className="bg-gray-800 text-white text-base">PPA (power purchase agreement)</TableHead>
     </TableRow>
@@ -39,7 +39,7 @@ const ComparisonPreview = () => {
     </TableRow>
               <TableRow className="grid grid-cols-[15%_1fr_1fr_1fr]">
                 <TableCell className="bg-gray-800 text-white text-base">How it works</TableCell>
-                <TableCell className="bg-primary-light/30 text-base">Use energy for free and sell excess to the grid in exchange for a monthly service fee, with peace of mind through our positive value guarantee. We manage and pay for all aspects of the installation, including monitoring, maintenance, repairs and insurance.</TableCell>
+                <TableCell className="bg-primary-light/30 text-base">Use energy for free and sell excess to the grid in exchange for an annual service fee, with peace of mind through our positive value guarantee. We manage and pay for all aspects of the installation, including monitoring, maintenance, repairs and insurance.</TableCell>
                 <TableCell className="text-base">Borrow money from a lender directly or via a broker to fund the installation. Manage and pay for all day-to-day monitoring, maintenance and repairs yourself.</TableCell>
                 <TableCell className="text-base">Buy energy at a slightly cheaper rate than from the grid, in exchange for the PPA provider building the installation and managing it day-to-day.</TableCell>
               </TableRow>
