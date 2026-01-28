@@ -13,6 +13,7 @@ const ContactForm = () => {
   return (
     <Link to="https://docs.google.com/forms/d/e/1FAIpQLScTb4tKEV0NG6QeC_ttk9nRanUrP5myAsFGsOhWPXzebT7CxQ/viewform">
       <motion.section
+        id="ContactForm"
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         className="section-padding bg-primary-dark cursor-pointer"

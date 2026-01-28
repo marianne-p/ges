@@ -14,6 +14,8 @@ import { motion } from 'framer-motion';
 import solarPanel1 from '@/img/solar-panel-1.jpg';
 import solarPanel2 from '@/img/solar-panel-2.jpg';
 import solarPanel3 from '@/img/solar-panel-3.jpg';
+import CaseStudyReview from "@/components/CaseStudy";
+import GES_logo from "../img/GES_logo.png";
 
 const Index = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -69,29 +71,37 @@ const Index = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-dark to-primary/70"></div>
-        <div className="relative text-white section-padding min-h-[80vh] flex items-center">
+        <div className="relative text-white section-padding min-h-[30vh] flex items-center">
           <div className="container mx-auto">
-            <div className="flex items-center mb-8">
-              <h2 className="text-2xl font-medium">Green Earth Solutions</h2>
-            </div>
+          <div className="flex items-center mb-8 gap-6">
+            <img
+              src={GES_logo}
+              alt="Green Earth Solutions Logo"
+              className="h-36 object-contain rounded-lg"
+            />
+            <h1 className="text-4xl sm:text-6xl font-medium light-300">
+              Innovation that unlocks <br />
+              solar for your organisation
+            </h1>
+          </div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-left max-w-2xl"
             >
-              <h1 className="text-4xl sm:text-6xl font-medium mb-6 light-300">
-                Innovation that unlocks solar for your organisation
-              </h1>
+
               <p className="text-xl mb-8">
                 UK’s only Solar Service with Positive Value Guaranteed from Day 1. 
                 <br />
-                All-inclusive management of solar installations, so you can focus on your core activities while benefitting from green energy.
+                <span className="lg:whitespace-nowrap">
+                  All-inclusive management of solar installations, so you can focus on your core activities while benefitting from green energy.
+                </span>
               </p>
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-gray-100"
-                onClick={() => document.getElementById("solar-solution").scrollIntoView({ behavior: "smooth" })}
+                className="bg-white text-primary hover:bg-gray-100 font-bold text-xl"
+                onClick={() => document.getElementById("ContactForm").scrollIntoView({ behavior: "smooth" })}
               >
                 Get Started
                 <ArrowRightIcon className="ml-2 h-4 w-4" />
@@ -103,6 +113,7 @@ const Index = () => {
 
       <Benefits />
       <Services />
+      <CaseStudyReview />
       <ProcessSteps />
       <ComparisonPreview />
       <BenefitsChart />
