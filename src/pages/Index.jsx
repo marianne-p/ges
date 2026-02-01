@@ -71,19 +71,23 @@ const Index = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         />
         <div className="absolute inset-0 bg-gradient-to-br from-primary-dark to-primary/70"></div>
-        <div className="relative text-white section-padding min-h-[30vh] flex items-center">
+        <div className="relative text-white section-padding min-h-[30vh] flex items-start sm:items-center">
           <div className="container mx-auto">
-          <div className="flex items-center mb-8 gap-6">
-            <img
-              src={GES_logo}
-              alt="Green Earth Solutions Logo"
-              className="h-36 object-contain rounded-lg"
-            />
-            <h1 className="text-4xl sm:text-6xl font-medium light-300">
-              Innovation that unlocks <br />
-              solar for your organisation
-            </h1>
-          </div>
+            <div className="flex flex-col md:flex-row items-start md:items-center mb-6 sm:mb-8 gap-3 sm:gap-5 md:gap-6">
+              <img
+                src={GES_logo}
+                alt="Green Earth Solutions Logo"
+                className="h-20 sm:h-36 object-contain rounded-lg"
+              />
+              <div className="flex-1">
+                <h1 className="text-3xl sm:text-5xl xl:text-6xl font-medium light-300 leading-tight">
+                  Innovation that unlocks{" "}
+                  <br className="hidden sm:block" />
+                  solar for your organisation
+                </h1>
+              </div>
+            </div>
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -91,17 +95,19 @@ const Index = () => {
               className="text-left max-w-2xl"
             >
 
-              <p className="text-xl mb-8">
-                UK’s only Solar Service with Positive Value Guaranteed from Day 1. 
-                <br />
+              <p className="text-lg sm:text-xl mb-6 sm:mb-8">
+                UK’s only Solar Service with Positive Value Guaranteed from Day 1.{" "}
+                <br className="hidden sm:block" />
                 <span className="lg:whitespace-nowrap">
-                  All-inclusive management of solar installations, so you can focus on your core activities while benefitting from green energy.
+                  All-inclusive management of solar installations, so you can focus 
+                  on your core activities while benefitting from green energy.
                 </span>
               </p>
               <Button
                 size="lg"
-                className="bg-white text-primary hover:bg-gray-100 font-bold text-xl"
-                onClick={() => document.getElementById("ContactForm").scrollIntoView({ behavior: "smooth" })}
+                className="bg-white text-primary hover:bg-gray-100 font-bold text-lg sm:text-xl"
+                onClick={() => 
+                  document.getElementById("ContactForm").scrollIntoView({ behavior: "smooth" })}
               >
                 Get Started
                 <ArrowRightIcon className="ml-2 h-4 w-4" />

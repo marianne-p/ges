@@ -38,6 +38,9 @@ const steps = [
 const ProcessSteps = () => {
   return (
     <div className="container mx-auto py-8">
+      <div className='mb-10'>
+      <h2 className="section-title">How it works</h2>
+      </div>
       <div className="space-y-6 relative"> {/* Changed from space-y-12 to space-y-6 */}
         {steps.map((step, index) => (
           <div key={step.number} className="relative">
