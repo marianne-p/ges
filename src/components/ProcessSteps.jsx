@@ -37,27 +37,45 @@ const steps = [
 
 const ProcessSteps = () => {
   return (
-    <div className="container mx-auto py-8">
-      <div className='mb-10'>
-      <h2 className="section-title">How it works</h2>
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className='mb-6 sm:mb-10'>
+        <h2 className="section-title">How it works</h2>
       </div>
-      <div className="space-y-6 relative"> {/* Changed from space-y-12 to space-y-6 */}
+      <div className="space-y-4 sm:space-y-6 relative"> {/* Changed from space-y-12 to space-y-6 */}
         {steps.map((step, index) => (
           <div key={step.number} className="relative">
-            <div className="flex items-center bg-primary-light/10 p-6 rounded-lg hover:shadow-lg transition-all duration-300 relative z-10">
-              <span className="text-4xl font-bold text-primary-dark w-20">
+            <div className="
+                flex flex-col sm:flex-row
+                items-start sm:items-center 
+                bg-primary-light/10 
+                p-4 sm:p-6 rounded-lg 
+                hover:shadow-lg transition-all duration-300 
+                relative z-10
+                gap-2 sm:gap-0
+             "
+            >
+              <span className="text-2xl sm:text-4xl font-bold text-primary-dark w-auto sm:w-20">
                 {step.number}
               </span>
-              <h3 className="text-xl font-semibold text-primary-dark w-1/3 px-6">
+              <h3 className="
+              text-base sm:text-xl 
+              font-semibold text-primary-dark 
+              w-full sm:w-1/3 px-0 sm:px-6 leading-snug">
                 {step.title}
               </h3>
-              <p className="text-base text-primary-dark/80 flex-1">
+              <p className="
+              text-sm sm:text-base 
+              text-primary-dark/80 w-full sm:flex-1 leading-relaxed">
                 {step.description}
               </p>
             </div>
             
             {index < steps.length - 1 && (
-              <div className="absolute left-10 top-full h-6 w-0.5 bg-primary-dark/20"> {/* Changed from h-12 to h-6 */}
+              <div className="
+                absolute 
+                left-4 sm:left-10 
+                top-full h-3 sm:h-6 w-0.5 bg-primary-dark/20
+              ">
                 <div className="absolute -left-1.5 bottom-0 h-3 w-3 rounded-full bg-primary-dark/40" />
               </div>
             )}
