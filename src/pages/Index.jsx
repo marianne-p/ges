@@ -119,7 +119,11 @@ const Index = () => {
 
       <Benefits />
       <Services />
-      <CaseStudyReview />
+      
+      <div id="CaseStudyReview" className="scroll-mt-24">
+        <CaseStudyReview />  
+      </div>
+      
       <ProcessSteps />
       <ComparisonPreview />
       <BenefitsChart />
