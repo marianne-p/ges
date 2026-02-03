@@ -120,7 +120,7 @@ const Index = () => {
       <Benefits />
       <Services />
       
-      <div id="CaseStudyReview" className="scroll-mt-24">
+      <div id="Wonford-Green-Case-Study" className="scroll-mt-24">
         <CaseStudyReview />  
       </div>
       
