@@ -47,6 +47,25 @@ const Index = () => {
     return () => clearInterval(interval);
   }, [imagesLoaded, currentImageIndex]);
 
+  useEffect(() => {
+    if (window.location.hash) {
+      const id = window.location.hash.replace('#', '');
+      // Try immediately
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        // If not found, wait 500ms for the page to build, then try again
+        setTimeout(() => {
+          const retryElement = document.getElementById(id);
+          if (retryElement) {
+            retryElement.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 500);
+      }
+    }
+  }, []);
+  
   return (
     <div className="min-h-screen roboto-flex-light">
       <section className="relative">
