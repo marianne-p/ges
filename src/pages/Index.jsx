@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import Benefits from "@/components/Benefits";
 import Services from "@/components/Services";
+import OurAwards from "../components/OurAwards";
 import ProcessSteps from "@/components/ProcessSteps";
 import ComparisonPreview from "@/components/ComparisonPreview";
 import BenefitsChart from "@/components/BenefitsChart";
@@ -118,6 +119,7 @@ const Index = () => {
       </section>
 
       <Benefits />
+      <OurAwards />
       <Services />
       <CaseStudyReview />
       <ProcessSteps />
